@@ -1,19 +1,19 @@
 
-// === Requisiçao de API === //
+// === API REQUIREMENT === //
 
 const productList = document.querySelector('.products-list');
 const loadMoreButton = document.querySelector('.load-more');
- // Inicia uma busca por paginas.
+ // Starts a search for pages.
 let page = 1;
 
-// função para buscar dados da API e atualizar o HTML.
+// Function to search for API data and update HTML.
 function loadProducts(page) {
     const url = `https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${page}`;
-     // faz a requisição à API usando fetch.
+     // Make the request to the API using fetch.
     fetch(url)
       .then(response => response.json())
       .then(data => {
-         // faz uma busca dos produtos e cria os elementos de acordo com o conteudo obtido.
+         // Search the products and creates the elements according to the content obtained.
         data.products.forEach(product => {
           const li = document.createElement('div');
           const details = document.createElement('div');
@@ -34,8 +34,7 @@ function loadProducts(page) {
           });
           productList.appendChild(li);
         });
-
-        // verifica se há mais páginas para carregar
+        // Check if there are more pages to load. 
         if (data.nextPage) {
           loadMoreButton.disabled = false;
           loadMoreButton.textContent = 'Ainda mais produtos aqui!';
@@ -48,7 +47,7 @@ function loadProducts(page) {
   }
 
   loadProducts(page);
-  // Botão para pcarregar mais itens
+  // Button for more items.
   loadMoreButton.addEventListener('click', () => {
     loadMoreButton.disabled = true;
     loadMoreButton.textContent = 'Carregando...';
@@ -57,3 +56,26 @@ function loadProducts(page) {
   });
 
   
+// === Email Validation === //
+
+function validarFormulario() {
+  // Get the values of the names and email fields.
+  const nome = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+
+  // Checks if the fields are empty.
+  if (nome === '' || email === '') {
+    alert('Por favor, preencha todos os campos.');
+    return false;
+  }
+
+  // Check if the email field contains a valid email.
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Por favor, insira um email válido.');
+    return false;
+  }
+
+  // If everything is ok, return True to send the form.
+  return true;
+}

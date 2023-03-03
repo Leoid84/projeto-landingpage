@@ -42,27 +42,27 @@
                     </div>
                     <div class="collumn">
                         <!-- Contact form -->
-                        <form action="">
+                        <form action="" onsubmit="return validarFormulario()">
                             <div class="form-group">
                                 <label for="">Nome</label>
-                                <input type="text" name="" id="">
+                                <input type="text" name="text" id="" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="email" name="" id="">
+                                <input type="email" name="email" id="" required> 
                             </div>
                             <div class="form-group">
                                 <label for="">CPF</label>
-                                <input type="number" name="" id="">
+                                <input type="number" name="number" id="" >
                             </div>
                             <div class="form-group flex">
                                 <div>
-                                   <input type="radio" name="" id="">
+                                   <input type="radio" name="m" id="">
                                    <label for="">Masculino</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="" id="">
-                                    <label for="">Masculino</label>
+                                    <input type="radio" name="f" id="">
+                                    <label for="">Feminino</label>
                                  </div>
                             </div>
                             
@@ -87,15 +87,15 @@
             <div class="container">
               <h1 class="section-title heading-3 text-center">Compartilhe a novidade</h1>
               <p class="paragraph-2 text-center">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
-              <form action="">
+              <form  onsubmit="return validarFormulario()">
                 <div class="form-group flex">
                     <div class="form-group">
                     <label for="">Nome do seu amigo:</label>
-                    <input type="text" name="" id="">
+                    <input type="text" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Nome do seu amigo:</label>
-                        <input type="text" name="" id="">
+                        <label for="">E-mail:</label>
+                        <input type="email" name="email" required>
                     </div>
                 </div>
                  <button type="submit">Enviar agora</button>

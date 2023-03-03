@@ -219,7 +219,7 @@ button{
     color: #888888;
     background-color: #FFFFFF;
     border: 1px solid#888888;
-
+    cursor: pointer;
 }
 
 /*=== Footer ===*/
