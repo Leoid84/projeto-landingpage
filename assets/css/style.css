@@ -1,0 +1,249 @@
+/* Reset css */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Helvetica, Regular;
+    color: #888888;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: #888888;
+    font-size: 14px;
+}
+p{
+    margin-bottom: 5px;
+}
+
+/*=== Heading ===*/
+
+.heading-1{
+    font-size: 40px;
+}
+.heading-2{
+    font-size: 20px;
+}
+.heading-3{
+    font-size: 18px;
+}
+
+/*=== Paragraph ===*/
+
+.paragraph-1{
+    font-size: 16px;
+}
+.paragraph-2{
+    font-size: 14px;
+}
+.paragraph-3{
+    font-size: 12px;
+}
+
+/*=== alignment ===*/
+
+.text-center{
+    text-align: center;
+}
+
+/*=== Header ===*/
+
+header{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 399px;
+}
+header .layer{
+    border-top: 0;
+    border-bottom: 120px solid transparent;
+    border-right: 100vw solid #707070;
+
+}
+header .container{
+    text-align: center;
+    color: #FFFFFF;
+}
+header .heading-1{
+    margin-bottom: 24px;
+}
+header .heading-2{
+    padding-top: 69px;
+}
+
+
+/*=== Nav ==*/
+
+.nav{
+    display: grid;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+    grid-template-columns: 160px 160px 160px 160px;
+}
+.nav a{
+    padding: 10px 0;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+/*=== Container ===*/
+
+.container{
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1.6fr 1fr;
+}
+
+/*=== Sections ===*/
+
+/* Section 1 */
+#sec-1{
+    padding-top: 20.97px;
+    padding-bottom: 40px;
+}
+#sec-1 h1{
+    padding-bottom: 30px;
+}
+/* Section 2 */
+#sec-2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/* Section 3 */
+#sec-3{
+    padding-top: 40px;
+    padding-bottom: 71.76px;
+}
+#sec-3 h1{
+    margin-bottom: 44px;
+}
+#sec-3 p{
+    margin-bottom: 39px;
+}
+#sec-3 .form-group{
+    justify-content: center;
+}
+#sec-3 button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 53px !important;
+}
+
+
+/*=== Contact form ===*/
+
+.form-group{
+    margin-bottom: 20px;
+}
+.flex{
+    display: flex;
+    gap: 40px;
+}
+label{
+    color: #888888;
+    font-size: 12px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    display: grid;
+    width: 340px;
+    height: 30px;
+    padding: 10px 10px;
+    border: 1px solid #888888;
+    margin-top: 7px;
+}
+input[type="radius"]{
+    display: grid;
+    padding: 10px 10px;
+}
+button{
+    width: 340px;
+    padding: 10px 10px;
+    color: #888888;
+    background-color: #FFFFFF;
+    border: 1px solid#888888;
+}
+
+/*=== Footer ===*/
+
+footer{
+    position: relative;
+
+}
+footer .container{
+    padding-top: 157.24px;
+    padding-bottom: 86px; 
+ }
+footer p{
+   color: #FFFFFF;   
+   line-height: 20px;
+}
+
+.layer {
+    border-top: 120px solid transparent;
+    border-right: 100vw solid #707070;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+/*=== Media screen for tablets  ===*/
+@media screen and ( max-width:992px ){
+
+}
+/*=== Media screen for smartphones  ===*/
+@media screen and ( max-width:576px ){
+    header .container{
+        text-align: left;
+    }
+    .container{
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    /*=== Nav ==*/
+    .nav{
+        display: grid;
+        gap: 21px;
+        justify-content: center;
+        margin-top: 50px;
+        grid-template-columns: 160px 160px;
+        text-align: center;
+    }
+
+    .grid{
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 1fr;
+
+    }
+    #sec-3 .flex{
+        display: block !important;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"]{
+        display: grid;
+        width: 100%;
+        height: 30px;
+        padding: 10px 10px;
+        border: 1px solid #888888;
+        margin-top: 7px;
+    }
+    button{
+        width: 100%;
+    }
+}
