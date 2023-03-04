@@ -1,4 +1,4 @@
-# Challenge | Front-and Developer
+# Challenge | Front-end Developer
 
 This is a project of the Bold-Communications Challenge.
 
